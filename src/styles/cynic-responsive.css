@@ -14,6 +14,9 @@
 }
 
 @media (max-width: 1199px) {
+  .navbar-brand {
+    margin-right: 0;
+  }
   /* -- services css -- */
   .service-block {
     margin-bottom: 3rem;
@@ -27,6 +30,9 @@
 }
 
 @media (max-width: 991px) {
+  .navbar-brand {
+    margin-right: 0;
+  }
   /* -- common css -- */
   .section-gap {
     padding: 4.5rem 0;
@@ -103,8 +109,18 @@
     padding-top: 2.1rem;
   }
 }
-
+@media (min-width: 767px) {
+  .modal-contact .modal-content {
+    background: #6384ff !important;
+    border-radius: 1rem;
+    padding: 120px 1.5rem 120px 1.5rem !important;
+    margin: 130px 0 80px 0;
+  }
+}
 @media (max-width: 767px) {
+  .navbar-brand {
+    margin-right: 0;
+  }
   body {
     font-size: 1.4rem;
     line-height: 2.6rem;
@@ -149,6 +165,7 @@
   }
   .counter-block .icon-container img {
     max-height: 4rem;
+    margin-left: 25px;
   }
   .counter-wrapper {
     font-size: 1.4rem;
@@ -185,6 +202,7 @@
   .clients {
     padding: 4rem 0;
   }
+
   .img-card h4 span {
     font-size: 1.8rem;
     line-height: 2.8rem;
@@ -279,6 +297,9 @@
 }
 
 @media (max-width: 575px) {
+  .navbar-brand {
+    margin-right: 0;
+  }
   .onepage-services {
     padding: 0 15px;
   }

@@ -10,7 +10,7 @@ const HeaderMenu = () => {
           className="navbar navbar-expand-lg align-items-center scrolled header-scrolled"
           id="navbar-header"
         >
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="#1">
             <Logo color="#3f7bf3" />
           </a>
 

@@ -4555,6 +4555,7 @@ fieldset:disabled .btn {
 .nav-justified > .nav-link {
   flex-basis: 0;
   flex-grow: 1;
+
   text-align: center;
 }
 
@@ -6280,8 +6281,8 @@ fieldset:disabled .btn {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin-left: 35rem !important;
   pointer-events: none;
+  max-width: 1170px !important;
 }
 
 .modal.fade .modal-dialog {
@@ -6325,7 +6326,6 @@ fieldset:disabled .btn {
 .modal-content {
   position: relative;
   display: flex;
-  width: 120rem !important;
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
@@ -6881,6 +6881,10 @@ fieldset:disabled .btn {
   position: relative;
   width: 100%;
   overflow: hidden;
+  border-radius: 1rem !important;
+}
+.carousel-inner img {
+  border-radius: 1rem !important;
 }
 
 .carousel-inner::after {

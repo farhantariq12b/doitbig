@@ -12,8 +12,47 @@
     transform: translate(0);
   }
 }
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: unset;
+}
+#main {
+  position: relative;
+  top: 10rem;
+}
 .modal-body {
   width: 100%;
+}
+.next-icon {
+  top: 40%;
+  position: absolute !important;
+  right: calc(4% - 30px) !important;
+  height: 50px;
+  width: 50px;
+  background-color: #003a9e !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10vh;
+}
+
+.prev-icon {
+  top: 40%;
+  position: absolute !important;
+  left: calc(4% - 30px) !important;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  background-color: #003a9e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10vh;
+}
+.indicator {
+  color: white;
 }
 .container {
   font-family: "Roboto", sans-serif;
@@ -79,6 +118,130 @@
 .text-right {
   text-align: right !important;
 }
+@media only screen and (max-width: 750px) {
+  .counter-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .counter-wrapper .number .counter {
+    font-size: 2rem;
+  }
+  .counter-wrapper .number .span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .counter-block {
+    display: block !important;
+    text-align: center;
+  }
+  .counter-block .icon-container {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .counter-block .icon-container img {
+    max-height: 4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-gap {
+    padding: 4.5rem 0;
+  }
+  .achievements {
+    padding-bottom: 10.5rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+}
+
+@media only screen and (min-width: 1200px) {
+  .img-card {
+    min-height: 38rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .img-card {
+    min-height: 44rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .img-card {
+    min-height: 45rem;
+  }
+  .img-card-item {
+    margin: 0 0rem !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .img-card {
+    min-height: 41rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .img-card {
+    min-height: 44rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .img-card {
+    min-height: 40rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .img-card {
+    min-height: 36rem;
+  }
+  .arrow-left {
+    left: calc(4% - 30px) !important;
+  }
+  .arrow-right {
+    right: calc(4% - 30px) !important;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .img-card {
+    min-height: 38rem;
+  }
+}
+@media only screen and (max-width: 485px) {
+  .next-icon {
+    top: 30%;
+  }
+  .prev-icon {
+    top: 30%;
+  }
+  .img-card {
+    min-height: 40rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .next-icon {
+    top: 20%;
+  }
+  .prev-icon {
+    top: 20%;
+  }
+  .img-card {
+    min-height: 41rem;
+  }
+  .arrow-left {
+    left: calc(4% - 20px);
+  }
+  .arrow-right {
+    right: calc(4% - 20px);
+  }
+}
+
+@media only screen and (min-width: 465px) {
+  .img-card-item {
+    margin: 0 1rem;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .text-lg-left {
@@ -120,6 +283,16 @@ body {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+}
+.header-container {
+  width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-width: 1200px;
+  position: fixed;
+  z-index: 10;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .row {
@@ -483,12 +656,10 @@ textarea {
 .modal-contact .modal-content {
   background: #6384ff !important;
   border-radius: 1rem;
-  /* padding: 80px 0 120px 0 !important; */
-  margin: 120px 0 120px 0;
+  padding: 120px 1.5rem 120px 1.5rem;
+  margin: 130px 0 80px 0;
 }
-.modal-contact {
-  padding: 120px 0 120px 0;
-}
+
 .full-width-modal.quote-modal .modal-content {
   padding-top: 117.5px;
   padding-bottom: 115.5px;
@@ -531,6 +702,12 @@ textarea {
   width: 2.5rem;
   color: white;
 }
+.cross-btn .icon-black {
+  padding-right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: black;
+}
 .full-width-modal.quote-modal .modal-content .close {
   color: #fff;
 }
@@ -569,24 +746,34 @@ header {
   left: 0;
   z-index: 999;
 }
-.header-scrolled {
-  width: 100%;
-  z-index: 1000;
-}
+@media (max-width: 991px) {
+  .navbar-nav {
+    background-color: #eee;
+    padding: 2.1rem 1.5rem;
+    text-align: center;
+  }
+  .navbar-nav li a:not(.custom-btn)::after {
+    content: none !important;
+  }
 
-.header-container{
-  width: 100%;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  max-width: 1300px;
-  position: fixed;
-  z-index: 10;
-  padding-right: 15px;
-  padding-left: 15px;
+  .navbar-nav li {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .navbar-nav li a:not(.custom-btn) {
+    padding: 1rem 0 !important;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar-nav li {
+    margin-left: 1.5rem;
+  }
 }
 
 .navbar {
   border-bottom: 1px solid #ecf2f8;
+  background-color: rgba(255, 255, 255, 0.97);
   padding: 0;
   transition: all 0.5s;
 }
@@ -600,7 +787,6 @@ header {
 
 .navbar-brand {
   padding: 0;
-  margin-right: 55rem;
   line-height: 8.6rem;
 }
 
@@ -735,7 +921,7 @@ header {
 /* -- Services css
 -------------------------------- -- */
 .onepage-services {
-  padding: 0 14.0625%;
+  padding: 20px 14.0625%;
 }
 
 .onepage-services .floating-service-wrapper {
@@ -794,6 +980,7 @@ header {
 .service-block:hover .service-overlay {
   opacity: 1;
   visibility: visible;
+  font-weight: 500;
 }
 
 /* -- Features css
@@ -848,11 +1035,6 @@ header {
   padding: 80px 14.0625%;
   background-size: auto;
   background-repeat: no-repeat;
-}
-.cards-wrapper {
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .tab-pane {
@@ -946,13 +1128,14 @@ header {
 
 /* -- Team css
 ----------------------------------- -- */
+
 .img-card {
+  cursor: pointer;
   display: block;
   overflow: hidden;
   border-radius: 5px;
   margin: 15px auto;
-  max-width: 40rem;
-  min-height: 45rem;
+  max-width: 35rem;
   background-color: #fff;
 }
 .img-card > img {
@@ -966,6 +1149,7 @@ header {
   padding: 2.2rem 15px 2.1rem;
   margin-bottom: 0;
   background: #fff;
+  height: fit-content;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -995,7 +1179,7 @@ header {
 
 .modal .modal-content {
   border: 1px solid #e6f2ff;
-  padding: 7rem 7rem 5.5rem;
+  padding: 6rem 1rem 1rem;
   background: #fff;
 }
 .modal .modal-content .close {
@@ -1037,7 +1221,7 @@ header {
   display: inline-block;
 }
 .carousel-indicators button {
-  background-color: black !important;
+  background-color: black;
 }
 .modal-title h2 span {
   display: block;
@@ -1047,11 +1231,49 @@ header {
   color: #546182;
   margin-bottom: 0.7rem;
 }
+.react-multi-carousel-list {
+  position: unset !important;
+}
+.arrow-right {
+  right: calc(4% - 1px);
+  position: absolute;
+  outline: 0;
+  transition: all 0.5s;
+  z-index: 1000000 !important;
+  border: none !important;
+  background: transparent;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+}
+.arrow-left {
+  left: calc(4% - 1px);
+  position: absolute;
+  outline: 0;
+  transition: all 0.5s;
+  z-index: 1000000 !important;
+  border: none !important;
+  background: transparent;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+}
+.icon {
+  color: white;
+  height: 8rem;
+  width: 8rem;
+}
 .modal-title .custom-btn {
   margin-top: 0.5rem;
   margin-bottom: 5rem;
 }
-
+.react-multiple-carousel__arrow .react-multiple-carousel__arrow--left {
+  background: red !important;
+  background-color: red !important;
+  color: red !important;
+}
 .team-modal .modal-body {
   padding: 0;
 }
@@ -1130,7 +1352,6 @@ header {
 /* -- Pricing style
 ---------------------------------- -- */
 .pricing {
-  /* background-image: url(../images/banner/inner-section-bg.png); */
   background-position: center bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -1336,7 +1557,6 @@ header {
 /* -- Reviews css
 ----------------------------- -- */
 .customer-reviews {
-  /* background-image: url(../images/banner/inner-section-bg-left.png); */
   background-position: left bottom;
   background-size: auto;
   background-repeat: no-repeat;
@@ -1364,6 +1584,9 @@ header {
   font-style: normal;
   font-weight: 300;
 }
+#consultancy {
+  margin-top: -2rem;
+}
 .review-card .media a {
   text-decoration: none;
 }
@@ -1374,7 +1597,7 @@ header {
 /* -- Location css
 ----------------------------- -- */
 .location {
-  /* background-image: url(../images/banner/inner-section-bg-right.png); */
+  /* background-image: url(../../public/inbg.png); */
   background-position: right bottom;
   background-size: auto;
   background-repeat: no-repeat;
@@ -1388,6 +1611,7 @@ header {
 .nav-tabs .nav-item {
   margin-bottom: 0;
 }
+
 .nav-tabs .nav-link {
   font-family: "Catamaran", sans-serif;
   color: #0a8aff;
@@ -1466,6 +1690,8 @@ header {
 .page-footer {
   padding: 5.6rem 0 5.2rem;
   background-color: #e6f2ff;
+  position: relative;
+  top: 10rem;
 }
 .page-footer a {
   white-space: nowrap;

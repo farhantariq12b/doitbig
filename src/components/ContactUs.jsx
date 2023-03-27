@@ -18,11 +18,13 @@ const ContactUs = () => {
       <Container>
         <Row>
           <Col
-            xs={{ span: 6, offset: 2 }}
+            xs={{ span: 7, offset: 2 }}
             sm={{ span: 6, offset: 2 }}
             md={{ span: 6, offset: 4 }}
           >
-            <h1 style={{ color: "#32325C", marginTop: "30px" }}>Contact Us</h1>
+            <h1 style={{ color: "#32325C", marginTop: "30px" }}>
+              Our Location
+            </h1>
           </Col>
         </Row>
         <Row>
@@ -30,7 +32,7 @@ const ContactUs = () => {
             <iframe
               title="1"
               src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d53911755.153680496!2d-154.9620086316962!3d34.439138693230774!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%20California%20USA!3m2!1d34.0522342!2d-118.24368489999999!5e0!3m2!1sen!2s!4v1679481353100!5m2!1sen!2s"
-              width="92%"
+              width="100%"
               height="500"
               style={{ border: "0", borderRadius: "5px" }}
               allowfullscreen=""
@@ -39,6 +41,7 @@ const ContactUs = () => {
             ></iframe>
           </Col>
         </Row>
+        <div id="5"></div>
         <Row>
           <Col
             xs={{ span: 10, offset: 1 }}
@@ -71,7 +74,7 @@ const ContactUs = () => {
           <Col
             xs={{ span: 10, offset: 1 }}
             sm={{ span: 4, offset: 0 }}
-            md={{ span: 3, offset: 0 }}
+            md={{ span: 2, offset: 1 }}
           >
             <Button
               onClick={handleShowModal}
@@ -79,8 +82,9 @@ const ContactUs = () => {
                 backgroundColor: "#fc7c56",
                 border: "0px",
                 height: "45px",
-                width: "150px",
-                marginTop: "40px",
+                width: "100%",
+                fontSize: "15px",
+                marginTop: "20px",
               }}
             >
               {" "}

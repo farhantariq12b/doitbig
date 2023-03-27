@@ -1,11 +1,33 @@
 import { useEffect } from "react";
 import ContactUs from "./ContactUs";
-import Footer from "./Footer";
-import HeaderMenu from "./HeaderMenu";
 import Introduction from "./Introduction";
 import Process from "./Process";
 import Services from "./Services";
 import Work from "./Work";
+
+const styles = {
+  intro: {
+    paddingTop: "80px",
+    backgroundImage: "url(/introbg.png)",
+    paddingBottom: "60px",
+    backgroundPosition: "center bottom",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% auto",
+  },
+  work: {
+    backgroundImage: "url(/inbg.png)",
+    backgroundPosition: "right bottom",
+    backgroundSize: "auto",
+    backgroundRepeat: "no-repeat",
+  },
+  contact: {
+    backgroundImage: "url(/inbg.png)",
+    backgroundPosition: "right bottom",
+    backgroundSize: "auto",
+    backgroundRepeat: "no-repeat",
+    paddingBottom: "40px",
+  },
+};
 
 const MainPage = () => {
   useEffect(() => {
@@ -16,19 +38,19 @@ const MainPage = () => {
   }, []);
   return (
     <div style={{ width: "100%" }}>
-      <div id={1}>
+      <div id={1} style={styles.intro}>
         <Introduction />
       </div>
       <div id={2}>
         <Services />
       </div>
-      <div id={3}>
+      <div style={styles.work}>
         <Work />
       </div>
-      <div id={4}>
+      <div>
         <Process />
       </div>
-      <div id={5}>
+      <div>
         <ContactUs />
       </div>
     </div>
